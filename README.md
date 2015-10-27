@@ -5,7 +5,8 @@ SAMPLE:
 -------
 调用示例可以直接看app包下的SAMPLE.
 
-图片录制的不是很清楚，将就下看哈
+图片录制的不是很清楚，将就下看哈.
+
 ![enter image description here](https://github.com/ng2Kaming/DimensCodeTools/blob/master/art/dimens_sample.gif)
 
 USAGE:
