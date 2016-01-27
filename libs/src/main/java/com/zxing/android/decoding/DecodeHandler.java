@@ -29,7 +29,7 @@ import com.google.zxing.MultiFormatReader;
 import com.google.zxing.ReaderException;
 import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
-import com.yo.libs.ui.CaptureActivity;
+import com.yo.dimenscodetools.ui.CaptureActivity;
 import com.zxing.android.MessageIDs;
 import com.zxing.android.camera.PlanarYUVLuminanceSource;
 

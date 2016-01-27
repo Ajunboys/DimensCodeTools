@@ -1,4 +1,4 @@
-package com.yo.libs.dimenscode;
+package com.yo.dimenscodetools.dimenscode;
 
 import java.util.Hashtable;
 

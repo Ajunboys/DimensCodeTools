@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.yo.libs.app.DimensCodeTools;
+import com.yo.dimenscodetools.app.DimensCodeTools;
 
 
 /**

@@ -6,12 +6,8 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.PopupWindow;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.ChecksumException;
@@ -19,9 +15,8 @@ import com.google.zxing.FormatException;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.Result;
 import com.google.zxing.WriterException;
-import com.google.zxing.qrcode.encoder.QRCode;
-import com.yo.libs.dimenscode.QRCodeFactory;
-import com.yo.libs.dimenscode.ScanHelper;
+import com.yo.dimenscodetools.dimenscode.QRCodeFactory;
+import com.yo.dimenscodetools.dimenscode.ScanHelper;
 
 import java.io.File;
 import java.io.FileNotFoundException;

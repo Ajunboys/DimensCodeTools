@@ -1,4 +1,4 @@
-package com.yo.libs.app;
+package com.yo.dimenscodetools.app;
 
 /**
  * 开启扫描界面时传递参数的常量类

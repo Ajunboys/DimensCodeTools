@@ -28,7 +28,7 @@ import android.util.Log;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
-import com.yo.libs.ui.CaptureActivity;
+import com.yo.dimenscodetools.ui.CaptureActivity;
 import com.zxing.android.MessageIDs;
 import com.zxing.android.view.ViewfinderResultPointCallback;
 

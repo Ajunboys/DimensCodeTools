@@ -1,4 +1,4 @@
-package com.yo.libs.dimenscode;
+package com.yo.dimenscodetools.dimenscode;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -16,7 +16,6 @@ import android.graphics.Color;
 import android.graphics.PointF;
 import android.view.Gravity;
 import android.view.View.MeasureSpec;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.LinearLayout.LayoutParams;
 

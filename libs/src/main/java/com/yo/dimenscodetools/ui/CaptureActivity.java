@@ -1,4 +1,4 @@
-package com.yo.libs.ui;
+package com.yo.dimenscodetools.ui;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -44,11 +44,11 @@ import com.google.zxing.ChecksumException;
 import com.google.zxing.FormatException;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.Result;
-import com.yo.libs.app.ScanParams;
-import com.yo.libs.dimenscode.ScanHelper;
-import com.yo.libs.utils.AssetsUtils;
-import com.yo.libs.utils.FileUtils;
-import com.yo.libs.utils.PixDpUtils;
+import com.yo.dimenscodetools.app.ScanParams;
+import com.yo.dimenscodetools.dimenscode.ScanHelper;
+import com.yo.dimenscodetools.utils.FileUtils;
+import com.yo.dimenscodetools.utils.PixDpUtils;
+import com.yo.dimenscodetools.utils.AssetsUtils;
 import com.zxing.android.MessageIDs;
 import com.zxing.android.camera.CameraManager;
 import com.zxing.android.decoding.CaptureActivityHandler;
@@ -78,19 +78,19 @@ public class CaptureActivity extends Activity implements Callback {
 	/**
 	 * 默认二维码扫描框的宽度
 	 */
-	private static final int DEFAULT_QRCODE_WIDTH = 500;
+	private static final int DEFAULT_QRCODE_WIDTH = 313;
 	/**
 	 * 默认二维码扫描框的高度
 	 */
-	private static final int DEFAULT_QRCODE_HEIGHT = 500;
+	private static final int DEFAULT_QRCODE_HEIGHT = 313;
 	/**
 	 * 默认条形码扫描框的宽度
 	 */
-	private static final int DEFAULT_BARCODE_WIDTH = 500;
+	private static final int DEFAULT_BARCODE_WIDTH = 313;
 	/**
 	 * 默认条形码扫描框的高度
 	 */
-	private static final int DEFAULT_BARCODE_HEIGHT = 250;
+	private static final int DEFAULT_BARCODE_HEIGHT = 156;
 	/**
 	 * 最小二维码扫描框的宽度
 	 */
@@ -178,7 +178,18 @@ public class CaptureActivity extends Activity implements Callback {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		// requestWindowFeature(Window.FEATURE_NO_TITLE);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+			Window window = getWindow();
+			// Translucent status bar
+			window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
+					WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+			// Translucent navigation bar
+			window.setFlags(
+					WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION,
+					WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+		}
+
 		// 初始化图片
 		initImages();
 		// 初始化布局
@@ -189,13 +200,13 @@ public class CaptureActivity extends Activity implements Callback {
 		// 接受传递过来的值
 		mFeatures = getIntent().getIntExtra(ScanParams.WHICH, DEFAULT_SCAN);
 		mQRCodeWidth = getIntent().getIntExtra(ScanParams.QRCODE_WIDTH_PIX,
-				DEFAULT_QRCODE_WIDTH);
+				PixDpUtils.dip2px(this, DEFAULT_QRCODE_WIDTH));
 		mQRCodeHeight = getIntent().getIntExtra(ScanParams.QRCODE_HEIGHT_PIX,
-				DEFAULT_QRCODE_HEIGHT);
+				PixDpUtils.dip2px(this, DEFAULT_QRCODE_HEIGHT));
 		mBarCodeWidth = getIntent().getIntExtra(ScanParams.BARCODE_WIDTH_PIX,
-				DEFAULT_BARCODE_WIDTH);
+				PixDpUtils.dip2px(this, DEFAULT_BARCODE_WIDTH));
 		mBarCodeHeight = getIntent().getIntExtra(ScanParams.BARCODE_HEIGHT_PIX,
-				DEFAULT_BARCODE_HEIGHT);
+				PixDpUtils.dip2px(this, DEFAULT_BARCODE_HEIGHT));
 		//检查参数
 		checkParams();
 		// 屏幕常亮

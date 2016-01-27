@@ -12,7 +12,7 @@ import android.widget.Spinner;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
-import com.yo.libs.dimenscode.BarCodeFactory;
+import com.yo.dimenscodetools.dimenscode.BarCodeFactory;
 
 public class BarCodeActivity extends Activity {
 

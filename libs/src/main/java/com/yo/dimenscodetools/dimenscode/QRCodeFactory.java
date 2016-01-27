@@ -1,14 +1,12 @@
-package com.yo.libs.dimenscode;
+package com.yo.dimenscodetools.dimenscode;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.HashMap;
 import java.util.Map;
 
-import android.R.integer;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Color;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;

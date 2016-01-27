@@ -17,7 +17,7 @@ package com.zxing.android.decoding;/*
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.ResultPointCallback;
-import com.yo.libs.ui.CaptureActivity;
+import com.yo.dimenscodetools.ui.CaptureActivity;
 
 import android.os.Handler;
 import android.os.Looper;
